@@ -8,7 +8,7 @@ A.V.I.A. connects an operator dashboard (**Cockpit**) with a compact crew interf
 
 [![Watch the A.V.I.A. project demonstration](https://img.youtube.com/vi/14j2WjrN1sY/hqdefault.jpg)](https://www.youtube.com/watch?v=14j2WjrN1sY)
 
-**[Watch: A.V.I.A. — AI-Powered Crew Health Monitoring | 3-Minute Project Demo](https://www.youtube.com/watch?v=14j2WjrN1sY)**
+**[Watch: A.V.I.A. — AI-Powered Crew Health Monitoring | 4-Minute Project Demo](https://www.youtube.com/watch?v=14j2WjrN1sY)**
 
 > Educational prototype using fictional crew data. No physical sensor or wearable is connected. Clinical validation is not established; projections and software scenarios are labeled experimental.
 
