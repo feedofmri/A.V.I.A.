@@ -12,7 +12,7 @@ Sources:
 - https://www.spaceappschallenge.org/2026/challenges/health-monitoring-software/
 - https://dev.meta.ai/docs/models
 
-The existing CRM implementation is at `E:\AI Engineer\Development\Client\Active\aibi-crm\server\src\services\ai\provider.js`. It supports Meta via `https://api.meta.ai/v1/responses`, `MODEL_API_KEY` and `META_MODEL`, a strict JSON-schema request, `store:false`, bounded retries and deadlines. CRM QA records prior calls with `muse-spark-1.3`; that is not a current A.V.I.A. connectivity or medical evaluation. No secret was read or copied during planning. `store:false` is a request setting, not proof of zero provider retention.
+The provider integration uses Meta via `https://api.meta.ai/v1/responses`, `MODEL_API_KEY` and `META_MODEL`, a strict JSON-schema request, `store:false`, bounded retries and deadlines. Provider configuration alone is not evidence of current connectivity or medical effectiveness. `store:false` is a request setting, not proof of zero provider retention.
 
 Use that HTTP provider pattern behind an A.V.I.A.-specific server adapter. Configure `META_MODEL=muse-spark-1.3` initially, subject to the account's enabled model catalog. Independently validate every returned object on the server; JSON parsing alone is insufficient. Keep credentials on the server.
 

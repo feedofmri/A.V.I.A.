@@ -30,6 +30,6 @@ The automated suites cover APIs, model contracts, authorization, consent, concur
 
 ## Existing work and attribution
 
-The five trained checkpoints, encoder adapters and reference data were supplied before this implementation. Fusion runtime architecture was reconstructed from checkpoint shapes and handoff documentation. The Meta provider pattern was adapted from the team's existing CRM integration. Software implementation used AI coding assistance. Preserve the actual development chronology and identify team contributions accurately; do not describe supplied artifacts or earlier work as created during an event window.
+The five trained checkpoints, encoder adapters and reference data were supplied before this implementation. Fusion runtime architecture was reconstructed from checkpoint shapes and handoff documentation. The provider adapter incorporates pre-existing team integration work. Software implementation used AI coding assistance. Preserve the actual development chronology and identify team contributions accurately; do not describe supplied artifacts or earlier work as created during an event window.
 
 The team must confirm dataset/model redistribution rights and the licenses of bundled materials before public publication. NASA endorsement and acceptance into judging are not claimed.
