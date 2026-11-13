@@ -1,0 +1,27 @@
+name: Software platform verification
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  platform:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run install:all
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:platform
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: platform-verification
+          path: |
+            state/platform-validation.json
+            state/*.log
+            state/playwright-report/
+            state/browser-results/
+      - if: always()
+        run: docker compose -p avia-platform-test --env-file state/platform-test.env -f docker-compose.yml -f docker-compose.test.yml down --volumes --remove-orphans

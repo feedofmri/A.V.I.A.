@@ -1,0 +1,24 @@
+{
+  "version": "avia-software-1",
+  "architecture": "existing weights; reconstructed fusion variant; not clinical validation",
+  "files": {
+    "LSDS-7_Complete_Blood_Count_CBC_TRANSFORMED.csv": "32e4f9c97d3b636b5d5c2e72dab8c4d3319dee64c437508b092dad04603b2b8f",
+    "avia_cardiac_resp_encoder.pt.zip": "5697efa44bcda17839016197381b6cc685974c72c79e1311c11cc46bea99930d",
+    "avia_sleep_encoder.pt.zip": "d84038431cd7e0ae3fd48bd38a44d3a0830bdc569422cf4d5beed4194d6f85a5",
+    "avia_stress_encoder.pt.zip": "485ee50832cb627b8f6e77d9140c0b7a33ca543f8e93150af2410f6a2c4253d6",
+    "avia_suit_swelling_encoder.pt.zip": "21199777b622e9fc90b48027d52368e2274d6789417101609ff2334dadfd3f9c",
+    "avia_temporal_fusion_engine.pt.zip": "673b52b36d929e5d63be66c4c903b5bffd8753e05bbc12093d6dfdba602cf52c",
+    "bidmc_features_sanitized_personal_baseline.csv": "e5faabe641b422a66974ae03b928c2542ec1adf44704728a75860dda1c9bdda4",
+    "cardiac_encoder.py": "8d5d555fcb504143a32906fd58afa71d4f89e8c4b8d4328aed450e5e1f88902a",
+    "lbnp_harespod_digital_twin_features.csv": "5ab7cde9baf34f805c62f63431175cff3bfb7b3ace63c9615420f133f9d23fdd",
+    "nasa_context_encoder.py": "9749cad2d192d7f173370d1cfeffb9fb17433a13e7610039ddc618764a34dacf",
+    "osd919_29_tissues_validated_stats.csv": "13643feee8f56ebff45e4d3de13bc22415a59922fd5d7631a7ce28b755b312ad",
+    "sleep_edf_sc4001_epochs_features.csv": "c4b14afbdedd601616fde86e32f43d2014fec65774d6ac3e7a3dc69a21daf457",
+    "sleep_encoder.py": "f0a59021fae410ec70cc8e3515e46a5cbf63744c306f1a9da6c0a7acaa355838",
+    "stress_encoder.py": "bbb6bd85c8d181fe9a0104efbc666dc468310d6d00b7023cfe459234d03fcc9f",
+    "suit_swelling_encoder.py": "846fe95b3bfa1784d5865118992ac92558e3f290d1a29924e84da8d0a52c832e",
+    "suit_twin_32dim_embeddings.csv": "4a0daf32253166a10b5d2d872169d0be8636746c27477439fe145b62bc92631e",
+    "wesad_features_sanitized_personal_baseline.csv": "af299a743e67109ad4158ccc91136ddac0d983b5d80c4e028f768b391052dd09"
+  },
+  "preprocessing_sha256": "095cef7b830a1308828abe29e652bdcdf35dc3c6a0827376fea0ddc23bfb1963"
+}

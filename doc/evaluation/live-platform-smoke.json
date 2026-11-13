@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-12T00:18:48.680Z",
+  "provider": "meta",
+  "model": "muse-spark-1.3",
+  "fallback_reason": null,
+  "agents": [
+    "coordinator",
+    "knowledge",
+    "supervisor"
+  ],
+  "source_count": 7,
+  "status": "completed"
+}
