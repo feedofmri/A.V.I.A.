@@ -1,10 +1,10 @@
-# Agent and competition-preparation delivery
+# Health assistant reference
 
-This extends the previously delivered 24-item software platform with ten logical agent roles and the combined 27-item plan. The roles share one bounded orchestration service; each request runs the coordinator, the relevant specialist, and deterministic supervision. The project does not deploy ten independent language models or train new checkpoints.
+The health assistant uses ten logical roles within one bounded orchestration service. Each request runs the coordinator, the relevant specialist, and deterministic supervision. These roles use the existing model checkpoints; they are not independently trained language models.
 
-## Completion mapping
+## Capabilities and implementation
 
-| Item | Delivered implementation / artifact |
+| Capability | Implementation / reference |
 | --- | --- |
 | 1 Coordinator | Explicit/automatic role routing, scoped context tools, persisted run IDs and one bounded provider operation |
 | 2 Intake | Structured extraction, clarification, explicit value/unit/time grounding, validated additional observations and a model-supported telemetry form; proposals require confirmation |
@@ -36,9 +36,9 @@ This extends the previously delivered 24-item software platform with ten logical
 
 ## Use the assistant
 
-Open Cockpit or Pulse, sign in and select **Health assistant** in the navigation. **Mission tools** contains the guide, imports, tasks, journal, queue and activity. Operator accounts select a crew record; crew accounts are restricted to their own. The current local installation uses Cockpit `http://localhost:8080` and Pulse `http://localhost:8082` because another project owns port 8081. Clean installations default Pulse to 8081. See [UI delivery](UI-DELIVERY.md) for the responsive interface update.
+Open Cockpit or Pulse, sign in and select **Health assistant** in the navigation. **Mission tools** contains the guide, imports, tasks, journal, queue and activity. Operator accounts select a crew record; crew accounts are restricted to their own. Default Docker addresses are Cockpit `http://localhost:8080` and Pulse `http://localhost:8081`. Set `COCKPIT_PORT` or `PULSE_PORT` to use different ports. See the [interface guide](UI-DELIVERY.md) for navigation and responsive layouts.
 
-Local mode works without API credentials. Enable cloud processing only after reading its scope and saving preferences. The server uses `MODEL_API_KEY` and `META_MODEL`; never put them in a frontend environment. The provider adapter uses structured requests, output validation, bounded retries and deadlines. A private local environment has been configured; credentials are not committed or included in offline packages.
+Local mode works without API credentials. Enable cloud processing only after reading its scope and saving preferences. The server uses `MODEL_API_KEY` and `META_MODEL`; never put them in a frontend environment. The provider adapter uses structured requests, output validation, bounded retries and deadlines. Keep credentials in local environment configuration; exclude them from version control and offline packages.
 
 To process a journal excerpt, sign in as its owner, enable cloud processing and the separate journal option, save preferences and select the specific entry. Operator-sharing consent does not grant cloud consent. Revocation prevents subsequent cloud use; it cannot undo a request already sent. Encrypted local assessment history remains until deleted. Provider retention is governed by provider terms, not established by `store:false` alone.
 
