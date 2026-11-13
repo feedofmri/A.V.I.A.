@@ -1,0 +1,31 @@
+# Dependencies & builds
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Python (agent/, ml/)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+ml/data/
+ml/models/*
+!ml/models/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Local verification artifacts, backups and secrets
+state/
+playwright-report/
+test-results/

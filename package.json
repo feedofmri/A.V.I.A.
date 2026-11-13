@@ -1,0 +1,36 @@
+{
+  "name": "avia",
+  "private": true,
+  "description": "A.V.I.A. — Autonomous Vital Intelligence Agent (NASA Space Apps 2026)",
+  "scripts": {
+    "install:all": "npm --prefix server ci && npm --prefix bff ci && npm --prefix client-cockpit ci && npm --prefix client-pulse ci",
+    "build:all": "npm --prefix server run build && npm --prefix bff run build && npm --prefix client-cockpit run build && npm --prefix client-pulse run build",
+    "dev:agent": "cd agent && uvicorn src.api.main:app --port 8000",
+    "dev:server": "npm --prefix server run dev",
+    "dev:bff": "npm --prefix bff run dev",
+    "dev:cockpit": "npm --prefix client-cockpit run dev",
+    "dev:pulse": "npm --prefix client-pulse run dev",
+    "db:migrate": "npm --prefix server run db:migrate",
+    "db:seed": "npm --prefix server run db:seed",
+    "db:reseed": "npm --prefix server run db:seed -- --reseed",
+    "test:server": "npm --prefix server test",
+    "test:agent": "cd agent && python -m pytest -q tests",
+    "test:e2e": "node --test scripts/e2e.test.mjs",
+    "infra:up": "docker compose up -d postgres redis",
+    "docker:up": "docker compose up -d --build",
+    "docker:down": "docker compose down",
+    "test:platform": "node scripts/platform-test.mjs",
+    "test:regression": "node --test --test-concurrency=1 scripts/regression.test.mjs",
+    "test:browser": "playwright test",
+    "test:ui-unit": "node server/node_modules/tsx/dist/cli.mjs --test scripts/platform-unit.test.ts",
+    "demo:reset": "node scripts/demo-reset.mjs",
+    "backup": "node scripts/backup.mjs",
+    "offline:export": "node scripts/offline-bundle.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "prettier": "^3.10.0"
+  }
+}

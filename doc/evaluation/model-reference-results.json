@@ -1,0 +1,163 @@
+{
+  "scope": "supplied_reference_rows_not_independent_holdout",
+  "training_performed": false,
+  "clinical_validation": "not_established",
+  "manual_input_accuracy": "not_established",
+  "limitations": [
+    "Possible training/calibration overlap",
+    "Existing preprocessing uses these reference distributions",
+    "Raw features differ from manually approximated features",
+    "No labeled temporal-fusion holdout supplied"
+  ],
+  "models": {
+    "cardiac": {
+      "rows": 2408,
+      "excluded_missing_or_nonfinite": 0,
+      "accuracy_on_supplied_rows": 0.893272,
+      "balanced_accuracy_on_supplied_rows": 0.889748,
+      "labels": [
+        0,
+        1
+      ],
+      "confusion_matrix": [
+        [
+          1410,
+          154
+        ],
+        [
+          103,
+          741
+        ]
+      ],
+      "data_file": "bidmc_features_sanitized_personal_baseline.csv",
+      "respiratory_mae_bpm_on_supplied_rows": 1.54084
+    },
+    "stress": {
+      "rows": 3101,
+      "excluded_missing_or_nonfinite": 0,
+      "accuracy_on_supplied_rows": 0.99742,
+      "balanced_accuracy_on_supplied_rows": 0.998161,
+      "labels": [
+        0,
+        1
+      ],
+      "confusion_matrix": [
+        [
+          2167,
+          8
+        ],
+        [
+          0,
+          926
+        ]
+      ],
+      "data_file": "wesad_features_sanitized_personal_baseline.csv"
+    },
+    "sleep": {
+      "rows": 767,
+      "excluded_missing_or_nonfinite": 0,
+      "accuracy_on_supplied_rows": 0.817471,
+      "balanced_accuracy_on_supplied_rows": 0.761204,
+      "labels": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "confusion_matrix": [
+        [
+          53,
+          33,
+          0,
+          4,
+          24
+        ],
+        [
+          0,
+          40,
+          16,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          216,
+          32,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          219,
+          0
+        ],
+        [
+          2,
+          15,
+          9,
+          0,
+          99
+        ]
+      ],
+      "data_file": "sleep_edf_sc4001_epochs_features.csv"
+    },
+    "suit": {
+      "rows": 1575,
+      "excluded_missing_or_nonfinite": 0,
+      "accuracy_on_supplied_rows": 1.0,
+      "balanced_accuracy_on_supplied_rows": 1.0,
+      "labels": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "confusion_matrix": [
+        [
+          315,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          315,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          315,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          315,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          315
+        ]
+      ],
+      "data_file": "lbnp_harespod_digital_twin_features.csv"
+    },
+    "temporal_fusion": {
+      "accuracy": null,
+      "reason": "No independently labeled temporal sequences supplied; reference cases are covered by automated tests"
+    }
+  }
+}

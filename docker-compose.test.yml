@@ -1,0 +1,10 @@
+services:
+  ml-test:
+    profiles: [test]
+    build:
+      context: ./agent
+      target: test
+    environment:
+      AVIA_MODEL_DIR: /models
+    volumes:
+      - ./model files:/models:ro
