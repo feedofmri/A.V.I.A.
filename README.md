@@ -1,10 +1,8 @@
 # A.V.I.A. — Autonomous Vital Intelligence Agent
 
-Software-only crew health monitoring demonstration for NASA Space Apps 2026. Forms, CSV uploads, and labeled scenarios feed the existing local model weights. No hardware connection or model training is required.
+A.V.I.A. is a crew health monitoring prototype with a desktop control center, a compact crew interface, and local model inference. It supports health observations, CSV imports, personal baseline comparisons, alerts, and follow-up tasks. Labeled scenarios let users explore the workflow without connected hardware.
 
-Final submission repository: [feedofmri/A.V.I.A.](https://github.com/feedofmri/A.V.I.A.), branch `codex/submission-final`. See [submission release notes](doc/SUBMISSION-RELEASE.md) for the release contents and validation scope.
-
-See [software delivery and all 24 completed items](doc/SOFTWARE-DELIVERY.md), [model limitations](agent/MODEL-CARD.md), and [platform test instructions](doc/SOFTWARE-DELIVERY.md#verification-commands). The earlier [audit](doc/AUDIT-2026-11-12.md) describes the pre-implementation state.
+See the [architecture](doc/architecture.md), [feature reference](doc/SOFTWARE-DELIVERY.md), [model limitations](agent/MODEL-CARD.md), and [verification guide](doc/SOFTWARE-DELIVERY.md#verification-commands).
 
 Local demo login: **operator / avia-demo-operator**. Crew accounts: **okafor**, **brandt**, **sato**, **diaz**, password **avia-demo-crew**. Use separate browser contexts for multiple identities. Demo credentials and keys must be replaced before shared use.
 
@@ -72,11 +70,11 @@ The Vite dev servers proxy `/bff/*` (and `/api/*` for Pulse) to `localhost:4000`
 
 ## Tests
 
-The ten-role assistant and the combined 27-item delivery are documented in [Agent delivery](doc/AGENT-DELIVERY.md). Choose **Health assistant** in either client; **Mission tools** contains the guide, imports, tasks, journal, queue and activity. See [UI delivery](doc/UI-DELIVERY.md) for the responsive interface update. Local mode works without cloud credentials; optional Meta calls require saved consent. Evaluation and submission materials are in [doc/evaluation](doc/evaluation/README.md) and [doc/submission](doc/submission/PROJECT.md).
+Choose **Health assistant** in either client to review observations and proposed follow-up actions. **Mission tools** contains the guide, imports, tasks, journal, sync queue and activity. Local mode works without cloud credentials; optional Meta calls require saved consent. See the [assistant reference](doc/AGENT-DELIVERY.md), [interface guide](doc/UI-DELIVERY.md), and [evaluation reports](doc/evaluation/README.md).
 
-Cockpit's **Behavioral** page includes confirmed mood check-ins, recorded mood/sleep history, owner-controlled journal sharing and the wellbeing assistant. Crew accounts can open **Behavioral health** above their own health workspace. See [Behavioral Health delivery](doc/BEHAVIORAL-DELIVERY.md) for behavior and privacy details.
+Cockpit's **Behavioral** page includes confirmed mood check-ins, recorded mood/sleep history, owner-controlled journal sharing and the wellbeing assistant. Crew accounts can open **Behavioral health** above their own health workspace. See the [behavioral health guide](doc/BEHAVIORAL-DELIVERY.md) for behavior and privacy details.
 
-Run the complete isolated platform verification with `npm run test:platform` after installing Chromium using `npx playwright install chromium`. See the [24-item delivery checklist](doc/SOFTWARE-DELIVERY.md) and [verified test results](doc/TEST-REPORT-2026-11-12.md).
+Run the isolated platform verification with `npm run test:platform` after installing Chromium using `npx playwright install chromium`. See the [verification guide](doc/SOFTWARE-DELIVERY.md) and [dated test report](doc/TEST-REPORT-2026-11-12.md) for coverage and recorded results.
 
 ```bash
 npm run test:server       # core API unit tests

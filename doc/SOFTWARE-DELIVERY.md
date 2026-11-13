@@ -1,4 +1,4 @@
-# A.V.I.A. software delivery
+# A.V.I.A. feature reference
 
 This release implements the agreed software-only challenge demonstration. All observations are entered through forms, imported from CSV, or explicitly simulated. Existing model weights are retained. No sensor, wearable, BLE connection, new model training, or fine-tuning is required.
 

@@ -229,7 +229,7 @@ export function Workspace({
           </a>
           <h3>Guidance library · version 1</h3>
           <p>
-            Educational workflow authored for the A.V.I.A. demonstration,
+            Educational guidance for reviewing crew health observations;
             sources checked 12 November 2026. Clinical review is not
             established. Recheck units and the entered observation, review the
             personal baseline and quality flags, log symptoms, and seek mission

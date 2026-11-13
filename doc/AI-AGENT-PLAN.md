@@ -2,7 +2,7 @@
 
 Implementation is now documented in [AGENT-DELIVERY.md](AGENT-DELIVERY.md). This file preserves the design specification.
 
-Planning specification, 12 November 2026. These agents are proposed and have not been implemented by this document. The existing 24-item software demonstration and five supplied trained checkpoints remain the foundation. No new hardware or model training is proposed.
+Planning specification, 12 November 2026. These agents are proposed and have not been implemented by this document. The existing software platform and five supplied trained checkpoints remain the foundation. No new hardware or model training is proposed.
 
 ## Evidence and integration
 

@@ -236,7 +236,7 @@ export function OverviewView({ onNavigate }: OverviewViewProps = {}) {
                       ·
                     </span>
                     <span className="timeline-item__time">{alert.time}</span>
-                    {alert.isMock && <span className="chip">Mock</span>}
+                    {alert.isMock && <span className="chip">Illustrative</span>}
                   </div>
                 </div>
                 <div className="timeline-item__arrow">↗</div>

@@ -1,6 +1,6 @@
-# UI delivery — 12 November 2026
+# Interface guide
 
-Cockpit and Pulse now provide dedicated **Health assistant** and **Mission tools** navigation. The overview remains a crew overview, and the new tools have their own working screens.
+Cockpit and Pulse provide dedicated **Health assistant** and **Mission tools** navigation alongside the crew overview.
 
 The assistant includes a question composer, common review actions, an enter/review/confirm observation flow, readable responses with citations, confirmed action cards, a health snapshot, routine progress, review history and collapsible processing preferences. Twin scenarios show baseline/changed comparisons and suit-region results instead of JSON payloads. Guide, imports, tasks, journal, queue and activity use consistent cards and form controls.
 
@@ -10,8 +10,8 @@ Browser verification covers dedicated navigation, mobile bounds and drawer visib
 
 The redesign also fixed a stale observation context after confirmation and a misleading assessment indicator while saving processing preferences. Model weights and API contracts are unchanged.
 
-Open Cockpit at http://localhost:8080 or Pulse at http://localhost:8082 and refresh an already-open tab. In Cockpit choose **Health assistant** or **Mission tools** in the sidebar; Pulse provides the same destinations above its dashboard. Development servers remain at ports 5173 and 5174.
+Open Cockpit at http://localhost:8080 or Pulse at http://localhost:8081 using the default Docker configuration. In Cockpit choose **Health assistant** or **Mission tools** in the sidebar; Pulse provides the same destinations above its dashboard. Development servers remain at ports 5173 and 5174.
 
 Screenshots are generated under `state/ui-review/production-*.png`. Full platform results are documented in [TEST-REPORT-2026-11-12.md](TEST-REPORT-2026-11-12.md).
 
-The light-mode Digital Twin now receives theme changes in its Three.js controller and switches from additive glow to normal compositing with darker anatomy/status colors. Rendered-pixel browser coverage verifies dermal, skeletal and cardiovascular visibility on initial light-mode mounting and after live theme changes.
+The light-mode Digital Twin receives theme changes in its Three.js controller and switches from additive glow to normal compositing with darker anatomy/status colors. Rendered-pixel browser coverage verifies dermal, skeletal and cardiovascular visibility on initial light-mode mounting and after live theme changes.

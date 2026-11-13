@@ -149,7 +149,7 @@ export function AlertsView() {
                     >
                       {alert.detail}
                     </span>
-                    {alert.isMock && <span className="chip">Mock</span>}
+                    {alert.isMock && <span className="chip">Illustrative</span>}
                   </div>
                 </div>
                 <div

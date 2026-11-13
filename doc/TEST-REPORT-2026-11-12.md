@@ -2,7 +2,7 @@
 
 The original platform and ten-role agent extension passed the final isolated platform run: **139 tests, with zero failures or skips**, on Windows with Node 24.18.0, Docker Desktop and Chromium. This establishes the tested software behavior; it does not establish clinical safety, model accuracy or mission readiness.
 
-The original implementation mapping is in [SOFTWARE-DELIVERY.md](SOFTWARE-DELIVERY.md); the combined 27-item plan is mapped in [AGENT-DELIVERY.md](AGENT-DELIVERY.md). Existing supplied model weights were retained; no new model was trained. External clinical, licensing and event confirmations remain explicitly unverified.
+Feature coverage is documented in the [feature reference](SOFTWARE-DELIVERY.md) and [assistant reference](AGENT-DELIVERY.md). Existing supplied model weights were retained; no new model was trained. External clinical, licensing and event confirmations remain explicitly unverified.
 
 ## Automated results
 
