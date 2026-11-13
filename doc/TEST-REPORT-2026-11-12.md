@@ -8,22 +8,22 @@ Feature coverage is documented in the [feature reference](SOFTWARE-DELIVERY.md) 
 
 Command: `npm run test:platform`
 
-| Suite | Passed | Failed | Skipped |
-| --- | ---: | ---: | ---: |
-| Telemetry, agent, privacy and provider unit tests | 40 | 0 | 0 |
-| CSV parsing/validation unit tests | 4 | 0 | 0 |
-| Existing integration tests through BFF and real inference | 13 | 0 | 0 |
-| Reliability, privacy and authorization regressions | 19 | 0 | 0 |
-| ML contracts, artifacts, preprocessing and guardrails | 20 | 0 | 0 |
-| Assistant integration and action/consent regressions | 21 | 0 | 0 |
-| Chromium browser workflows | 22 | 0 | 0 |
-| **Total** | **139** | **0** | **0** |
+| Suite                                                     |  Passed | Failed | Skipped |
+| --------------------------------------------------------- | ------: | -----: | ------: |
+| Telemetry, agent, privacy and provider unit tests         |      40 |      0 |       0 |
+| CSV parsing/validation unit tests                         |       4 |      0 |       0 |
+| Existing integration tests through BFF and real inference |      13 |      0 |       0 |
+| Reliability, privacy and authorization regressions        |      19 |      0 |       0 |
+| ML contracts, artifacts, preprocessing and guardrails     |      20 |      0 |       0 |
+| Assistant integration and action/consent regressions      |      21 |      0 |       0 |
+| Chromium browser workflows                                |      22 |      0 |       0 |
+| **Total**                                                 | **139** |  **0** |   **0** |
 
 Production TypeScript/Vite builds passed for the server, BFF, Cockpit and Pulse. Docker images built successfully. PostgreSQL backup and restoration to a separate verification database passed. The final run used `node scripts/platform-test.mjs --keep` to retain its disposable stack for the demonstration recording. Only disposable test/verification projects are cleaned afterward; normal application data is preserved.
 
 The regression suite exercised a real inference-container outage and recovery, historical and concurrent telemetry, replay/conflicting event identifiers, baseline changes, atomic configuration validation, UTC task scheduling/history, alert transitions, journal consent/revocation/deletion, invalid authentication, cross-crew access, request origin checks and session revocation.
 
-Browser coverage exercised login, guide/source visibility, analytics and accessible data, CSV imports, persisted failed imports, offline submission across reload and reconnect, journal privacy controls, crew restrictions, repeated twin navigation, responsive keyboard navigation, and a complete operator-to-crew task/assessment/alert workflow across both clients. It also checked for unintended external runtime requests. Screenshots of Cockpit, alerts and Pulse were inspected. The UI revision adds four browser checks for dedicated navigation, mobile bounds and drawer behavior, dark/light text contrast, and readable scenario comparisons. Production desktop/mobile screens and all six mission-tool tabs were inspected; see [UI-DELIVERY.md](UI-DELIVERY.md). Test fixtures now explicitly establish processing preferences when resuming a disposable run.
+Browser coverage exercised login, guide/source visibility, analytics and accessible data, CSV imports, persisted failed imports, offline submission across reload and reconnect, journal privacy controls, crew restrictions, repeated twin navigation, responsive keyboard navigation, and a complete operator-to-crew task/assessment/alert workflow across both clients. It also checked for unintended external runtime requests. Screenshots of Cockpit, alerts and Pulse were inspected. The UI revision adds four browser checks for dedicated navigation, mobile bounds and drawer behavior, dark/light text contrast, and readable scenario comparisons. Production desktop/mobile screens and all six mission-tool tabs were inspected; see [interface guide](SOFTWARE-DELIVERY.md#interface-guide). Test fixtures now explicitly establish processing preferences when resuming a disposable run.
 
 Assistant checks additionally covered ten-role registration/routing, extraction grounding, ambiguous or incomplete text readings, factual local summaries, request leases longer than the provider deadline, rejected numeric/treatment claims, stale/Critical contradictions, invalid citations, encrypted-history tampering, account-scoped history, consent revocation, journal processing restrictions, confirmed/deletable observations, duplicate action confirmation, real twin/suit scenarios, and a confirmed intake reaching the existing inference service with Critical status preserved.
 
@@ -57,6 +57,4 @@ The supplied fusion architecture was reconstructed, manual inputs approximate so
 
 The builds emit a nonblocking size warning for the lazily loaded 3D twin chunk. Tests emit a Starlette/httpx deprecation warning; fresh seeding also emits a PostgreSQL client concurrency deprecation warning. These did not fail verification, but dependency migrations should address them before their announced breaking releases. Browser automation ran on Chromium; Firefox, Safari, assistive-technology certification, large-scale load and external security testing were outside this run.
 
-
-The full run now includes the light-mode twin rendered-pixel regression and four Behavioral Health workflows. Coverage verifies confirmed/persisted/deletable mood reports, actual owner/operator journal sharing and revocation, local wellbeing guidance, and mobile layouts in both themes. See [BEHAVIORAL-DELIVERY.md](BEHAVIORAL-DELIVERY.md). All 139 tests, production builds and backup/restore verification passed after these changes.
-
+The full run now includes the light-mode twin rendered-pixel regression and four Behavioral Health workflows. Coverage verifies confirmed/persisted/deletable mood reports, actual owner/operator journal sharing and revocation, local wellbeing guidance, and mobile layouts in both themes. See [behavioral health guide](SOFTWARE-DELIVERY.md#behavioral-health). All 139 tests, production builds and backup/restore verification passed after these changes.

@@ -8,15 +8,12 @@ dist/
 .env.*
 !.env.example
 
-# Python (agent/, ml/)
+# Python inference
 __pycache__/
 *.py[cod]
 .venv/
 venv/
 .ipynb_checkpoints/
-ml/data/
-ml/models/*
-!ml/models/.gitkeep
 
 # OS / editor
 .DS_Store
@@ -29,3 +26,8 @@ Thumbs.db
 state/
 playwright-report/
 test-results/
+
+# Obsolete design exports and local tool configuration
+/.extracted/
+/A.V.I.A. Cockpit and Pulse.zip
+/client-cockpit/.mcp.json

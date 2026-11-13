@@ -1,5 +1,11 @@
 # Pitch and demonstration
 
+## Published project video
+
+[A.V.I.A. — AI-Powered Crew Health Monitoring | 3-Minute Project Demo](https://www.youtube.com/watch?v=14j2WjrN1sY)
+
+This is the project presentation. The optional automated walkthrough below is a separate, reproducible recording workflow.
+
 ## Spoken pitch
 
 When an astronaut's readings change, a dashboard can show the numbers. The harder question is what those numbers mean, how reliable they are, and what should happen next.
