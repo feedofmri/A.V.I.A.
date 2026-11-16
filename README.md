@@ -300,6 +300,14 @@ Before shared deployment, configure `DEMO_MODE=false`, `AUTH_USERS`, independent
 
 ## Local development
 
+### Standalone HTML demo
+
+To package both existing interfaces without a backend, run `npm run build:standalone` after installing the project dependencies. Extract `state/standalone/AVIA-Standalone.zip` and open `index.html` in Chrome or Edge. No server or internet connection is needed. Cockpit and Pulse share the same HTML file and browser-local database; use the top-bar links to switch views and **Export local data** to download changes.
+
+The build embeds the existing React UI, styles, animation code, charts and Three.js renderer. Initial assessments use saved reference outputs for fictional seed inputs. New observations, assistant replies and adjustable scenarios use illustrative local rules/templates, with no live PyTorch or cloud inference. Browser data is unencrypted and intended for fictional demonstrations. Storage is tied to the file/browser/profile; moving the HTML can start a new store. `START-HERE.txt` in the ZIP explains accounts, export and reset. Run `npm run test:standalone` to verify file-based operation with browser networking disabled.
+
+### Full application development
+
 Use Node.js 24, Python 3.12 and Docker for PostgreSQL/Redis. Install root dependencies as well as the four application packages:
 
 ```bash

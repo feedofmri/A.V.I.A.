@@ -25,7 +25,9 @@
     "test:ui-unit": "node server/node_modules/tsx/dist/cli.mjs --test scripts/platform-unit.test.ts",
     "demo:reset": "node scripts/demo-reset.mjs",
     "backup": "node scripts/backup.mjs",
-    "offline:export": "node scripts/offline-bundle.mjs"
+    "offline:export": "node scripts/offline-bundle.mjs",
+    "build:standalone": "node scripts/build-standalone.mjs",
+    "test:standalone": "node scripts/standalone/verify.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.0",
